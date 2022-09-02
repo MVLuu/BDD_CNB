@@ -16,7 +16,6 @@ namespace BDD_CNB.StepDefinitions
 
         public MainCNB(BrowserDriver browserDriver)
         {
-            Console.WriteLine("HEllooo");
             _mainCNBPageObject = new MainPageObject(browserDriver.Current);
         }
 
@@ -39,10 +38,17 @@ namespace BDD_CNB.StepDefinitions
             _preferredPageObject = _mainCNBPageObject.ClickPreferredButton();
         }
 
-        [Then("the Preferred page loads with title (.*)")]
+        [Then("the Preferred page loads with title '(.*)'")]
         public void ThenThePreferredPageLoadsWithTitle(String expectedTitle)
         {
-            _preferredPageObject.GetPageName().Should().Be(expectedTitle);
+            var listTitles = TransformToListOfString(expectedTitle);
+            _preferredPageObject.GetPageName().Should().ContainAny(listTitles);
+        }
+
+        [StepArgumentTransformation]
+        public List<String> TransformToListOfString(string commaSeparatedList)
+        {
+            return commaSeparatedList.Split(",").ToList();
         }
     }
 }
