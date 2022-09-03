@@ -26,6 +26,7 @@ namespace BDD_CNB.PageObjects
         public Preferred ClickPreferredButton()
         {
             BankPreferredButtons[0].Click();
+            //Should wait and validate Prferred page.
             return new Preferred(_webDriver);
         }
 

@@ -99,7 +99,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("the customer clicks the Preferred button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
- testRunner.Then("the Preferred page loads with title Preferred Banking | City National Bank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the Preferred page loads with title \'Preferred Banking | City National Bank,Home " +
+                        "Equity Loans | City National Bank\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

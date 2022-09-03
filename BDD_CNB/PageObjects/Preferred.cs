@@ -12,7 +12,14 @@ namespace BDD_CNB.PageObjects
         IWebDriver _webDriver;
         public Preferred(IWebDriver webDriver)
         {
+            validatPageLoads();
             _webDriver = webDriver;
+        }
+
+        public void validatPageLoads()
+        {
+            // Confirm title
+            // Else throw page load failure exception.
         }
 
         public string GetPageName()
