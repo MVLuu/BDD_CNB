@@ -1,10 +1,5 @@
 ﻿using BDD_CNB.Drivers;
 using BoDi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace BDD_CNB.Hooks
